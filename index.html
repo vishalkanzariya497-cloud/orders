@@ -3,213 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahakali Mitti Cool | Official Store</title>
+<title>Mahakali Mitti Cool</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #1a1a1a; color: #fff; scroll-behavior: smooth; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0f0f0f;color:white;}
 
-.navbar {
-    background: #6b3e26;
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-}
-.navbar b { font-size: 22px; }
-.navbar a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
+.navbar{display:flex;justify-content:space-between;padding:15px 30px;background:#1a1a1a;}
+.navbar a{color:white;text-decoration:none;margin-left:15px;}
 
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1590076215667-875d4ef2d9de?auto=format&fit=crop&q=80&w=1600');
-    background-size: cover;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.hero{
+  height:70vh;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1590076215667-875d4ef2d9de');
+  background-size:cover;
+  display:flex;justify-content:center;align-items:center;flex-direction:column;
 }
-.hero h1 { color: #ff9800; }
+.hero h1{color:#ff9800;}
 
-.products { padding: 50px 20px; text-align: center; }
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-.product-box {
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    padding: 20px;
-}
-.product-box img {
-    width: 100%;
-    height: 320px;
-    object-fit: contain;
-    background: white;
-    border-radius: 15px;
+.products{padding:40px;text-align:center;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:#222;border-radius:10px;overflow:hidden;}
+.card img{width:100%;height:200px;object-fit:cover;background:white;}
+
+.btn{background:#ff9800;border:none;padding:10px;color:white;width:100%;cursor:pointer;}
+
+.cart,.order{padding:30px;max-width:600px;margin:auto;}
+.item{background:#333;margin:10px 0;padding:10px;display:flex;justify-content:space-between;}
+
+input{width:100%;padding:10px;margin:10px 0;border-radius:8px;border:none;}
+
+.location{text-align:center;padding:40px;}
+.location iframe{width:100%;height:250px;border:none;border-radius:10px;}
+
+.whatsapp{
+ position:fixed;bottom:20px;right:20px;background:#25D366;
+ padding:15px;border-radius:50%;font-size:25px;color:white;
 }
 
-.container { max-width: 800px; margin: auto; padding: 40px 20px; }
-input, select {
-    width: 100%; padding: 14px; margin: 10px 0;
-    border-radius: 10px;
-}
+#adminLogin{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;justify-content:center;align-items:center;}
+#dashboard{display:none;padding:30px;}
 
-.btn {
-    padding: 15px;
-    background: #ff9800;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.card {
-    background: rgba(255,255,255,0.1);
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-}
-
-.footer {
-    background: #6b3e26;
-    text-align: center;
-    padding: 30px;
-}
+.footer{text-align:center;padding:20px;background:#1a1a1a;}
 </style>
 </head>
 
 <body>
 
 <div class="navbar">
-    <b>🏺 Mahakali Mitti Cool</b>
-    <div>
-        <a href="#products">Products</a>
-        <a href="#order">Order</a>
-    </div>
+<b>Mahakali Mitti Cool</b>
+<div>
+<a href="#products">Products</a>
+<a href="#order">Order</a>
+</div>
 </div>
 
 <div class="hero">
-    <h1>Natural Cooling with Clay 🏺</h1>
-    <p>Pure Clay Pots – Health & Tradition Together</p>
+<h1>Natural Clay Pots</h1>
 </div>
 
 <div class="products" id="products">
-    <h2>Our Collection</h2>
-    <div class="product-grid">
-        <div class="product-box">
-            <img src="matki.jpg">
-            <b>Matki</b>
-            <p>Price: ₹100</p>
-        </div>
-        <div class="product-box">
-            <img src="rajvadi.jpg">
-            <b>Rajvadi</b>
-            <p>Price: ₹150</p>
-        </div>
-        <div class="product-box">
-            <img src="jodhapuri.jpg">
-            <b>Jodhapuri</b>
-            <p>Price: ₹150</p>
-        </div>
-        <div class="product-box">
-            <img src="perver.jpg">
-            <b>Perver</b>
-            <p>Price: ₹200</p>
-        </div>
-    </div>
+<h2>Products</h2>
+<div class="grid">
+
+<div class="card">
+<img src="matki.jpg">
+<h3>Matki ₹100</h3>
+<button class="btn" onclick="add('Matki',100)">Add</button>
 </div>
 
-<div class="container" id="order">
-    <h2 style="text-align: center;">Order Form 🛒</h2>
-
-    <input type="text" id="name" placeholder="Full Name">
-    <input type="tel" id="phone" placeholder="Mobile Number">
-    <input type="text" id="address" placeholder="Full Address">
-
-    <label>Select Product:</label>
-    <select id="product">
-        <option value="Matki" data-price="100">Matki - ₹100</option>
-        <option value="Rajvadi" data-price="150">Rajvadi - ₹150</option>
-        <option value="Jodhapuri" data-price="150">Jodhapuri - ₹150</option>
-        <option value="Perver" data-price="200">Perver - ₹200</option>
-    </select>
-
-    <label>Quantity:</label>
-    <input type="number" id="qty" value="1" min="1">
-
-    <button class="btn" onclick="addCart()">Add to Cart</button>
-
-    <div id="cart"></div>
-    <h3 id="total">Total: ₹0</h3>
-
-    <button class="btn" style="background: #25D366;" onclick="sendWhatsApp()">Send Order on WhatsApp</button>
-
-    <button class="btn" onclick="openLogin()" style="background:#555;">Admin Panel</button>
-
-    <div id="adminPanel" style="display:none;">
-        <h3>Order History</h3>
-        <div id="orders"></div>
-    </div>
+<div class="card">
+<img src="rajvadi.jpg">
+<h3>Rajvadi ₹150</h3>
+<button class="btn" onclick="add('Rajvadi',150)">Add</button>
 </div>
 
-<div class="footer">
-    <p><b>Mahakali Mitti Cool</b></p>
-    <p>© 2026 - Gujarat</p>
+<div class="card">
+<img src="jodhapuri.jpg">
+<h3>Jodhapuri ₹150</h3>
+<button class="btn" onclick="add('Jodhapuri',150)">Add</button>
+</div>
+
+<div class="card">
+<img src="perver.jpg">
+<h3>Perver ₹200</h3>
+<button class="btn" onclick="add('Perver',200)">Add</button>
+</div>
+
+</div>
+</div>
+
+<div class="cart">
+<h2>Cart</h2>
+<div id="cart"></div>
+<h3 id="total">Total ₹0</h3>
+</div>
+
+<div class="order" id="order">
+<h2>Details</h2>
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<input id="address" placeholder="Address">
+<button class="btn" onclick="order()">Order on WhatsApp</button>
+<button class="btn" onclick="openAdmin()">Admin</button>
+</div>
+
+<div class="location">
+<h2>Location</h2>
+<iframe src="https://www.google.com/maps?q=22.574444,71.186250&output=embed"></iframe>
+</div>
+
+<a href="https://wa.me/919328041499" class="whatsapp">💬</a>
+
+<div class="footer">© 2026</div>
+
+<!-- ADMIN -->
+<div id="adminLogin">
+<div style="background:#222;padding:20px;">
+<input id="adminPass" placeholder="Password">
+<button class="btn" onclick="login()">Login</button>
+</div>
+</div>
+
+<div id="dashboard">
+<h2>Dashboard</h2>
+<h3 id="sales">Total ₹0</h3>
+<div id="orders"></div>
 </div>
 
 <script>
-const ADMIN_PASSWORD = "1234";
-const WHATSAPP_NUMBER = "919328041499";
+let cart=[];
+let orders=JSON.parse(localStorage.getItem("orders"))||[];
 
-let cart = [];
-let orders = JSON.parse(localStorage.getItem("mitti_orders")) || [];
-
-function addCart(){
-    const p = document.getElementById("product");
-    const name = p.value;
-    const price = parseInt(p.options[p.selectedIndex].dataset.price);
-    const qty = parseInt(document.getElementById("qty").value);
-
-    const existing = cart.find(item => item.name === name);
-    if(existing){
-        existing.qty += qty;
-        existing.total = existing.qty * price;
-    } else {
-        cart.push({name, qty, price, total: price * qty});
-    }
-    render();
+function add(n,p){
+ let f=cart.find(i=>i.name==n);
+ if(f){f.qty++;f.total=f.qty*p}
+ else{cart.push({name:n,price:p,qty:1,total:p})}
+ render();
 }
 
 function render(){
-    const c = document.getElementById("cart");
-    let t = 0;
-    c.innerHTML = "";
-    cart.forEach((i)=>{
-        t += i.total;
-        c.innerHTML += `<div class='card'>${i.name} (x${i.qty}) = ₹${i.total}</div>`;
-    });
-    document.getElementById("total").innerText = "Total: ₹" + t;
+ let c=document.getElementById("cart"),t=0;
+ c.innerHTML="";
+ cart.forEach(i=>{
+  t+=i.total;
+  c.innerHTML+=`<div class="item">${i.name} x${i.qty} ₹${i.total}</div>`;
+ });
+ document.getElementById("total").innerText="Total ₹"+t;
 }
 
-function sendWhatsApp(){
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const address = document.getElementById("address").value;
+function order(){
+ let name=name.value,phone=phone.value,address=address.value;
+ if(!name||!phone||!address||cart.length==0)return alert("Fill details");
 
-    let msg = `New Order - Mahakali Mitti Cool%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0A`;
-    let total = 0;
+ let msg="Order%0A";
+ let total=0;
+ cart.forEach(i=>{
+  msg+=`${i.name} x${i.qty} ₹${i.total}%0A`;
+  total+=i.total;
+ });
 
-    cart.forEach(i=>{
-        msg += `${i.name} x${i.qty} = ₹${i.total}%0A`;
-        total += i.total;
-    });
+ orders.push({name,phone,address,total});
+ localStorage.setItem("orders",JSON.stringify(orders));
 
-    msg += `Total: ₹${total}`;
+ window.open("https://wa.me/919328041499?text="+msg);
+}
 
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank");
+function openAdmin(){
+ document.getElementById("adminLogin").style.display="flex";
+}
+
+function login(){
+ if(adminPass.value=="admin123"){
+  adminLogin.style.display="none";
+  dashboard.style.display="block";
+  load();
+ }
+}
+
+function load(){
+ let o=document.getElementById("orders"),t=0;
+ o.innerHTML="";
+ orders.forEach((i,x)=>{
+  t+=i.total;
+  o.innerHTML+=`<div class="item">${i.name} ₹${i.total}
+  <button onclick="del(${x})">❌</button></div>`;
+ });
+ document.getElementById("sales").innerText="Total ₹"+t;
+}
+
+function del(i){
+ orders.splice(i,1);
+ localStorage.setItem("orders",JSON.stringify(orders));
+ load();
 }
 </script>
 
